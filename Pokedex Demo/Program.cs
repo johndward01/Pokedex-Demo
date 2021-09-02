@@ -19,6 +19,20 @@ namespace Pokedex_Demo
             {
                 var info = JsonSerializer.Deserialize<Pokemon>(item.ToString());
                 Console.WriteLine(info.name);
+                Console.WriteLine(info.id);
+                Console.WriteLine(info.img);
+                Console.WriteLine();
+
+                Console.WriteLine("[   ");
+
+                foreach (var type in info.type)
+                {
+                    Console.WriteLine(type);
+                }
+
+                Console.WriteLine("]   ");
+                Console.WriteLine();
+
             }
 
         }
